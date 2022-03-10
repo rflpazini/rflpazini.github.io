@@ -188,13 +188,11 @@ disableHugoGeneratorInject = false
 
 [languages]
   [languages.en]
-    contentDir = 'content/english'
     subtitle  = "Rafael Pazini"
     weight    = 1
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
   [languages.pt-br]
-    contentDir = 'content/portuguese'
     subtitle  = "Rafael Pazini"
     weight    = 2
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'

@@ -6,12 +6,14 @@ draft: false
 
 {{< image src="https://pbs.twimg.com/profile_images/1198375649968377856/_uji6FKJ_400x400.jpg" alt="Hello Friend" position="left" style="border-radius: 8px; margin-right: 35px; margin-bottom: 35px; margin-top: 20px; max-width: 100%;width: 336px; float: left;-webkit-filter: grayscale(100%); filter: grayscale(100%);" >}}
 
-**Hey, I'm Rafael Pazini**. I started as a software engineer back in 2011, working with Flash, AS3 to be more exactly.
+**Hey, I’m Rafael Pazini**. I started as a software engineer back in 2011, working with Flash, AS3 to be more exact.
 
-Now my career is focused on Backend development. I'm currently **Software Engineer** at Único. Before that, I worked at Mercado Libre as SWE developing the new checkout flow for the biggest market place in Latim America. I'm originally from Brazil and now living in São Paulo with my girlfriend and nice plants.
+Now my career is focused on Backend development. I’m currently **Software Engineer** at a digital face ID startup, Único. Before that, I worked at Mercado Libre as SWE developing the new checkout flow for the biggest market place in Latim America. 
 
+I’m originally from Brazil and now living in São Paulo with my girlfriend and nice plants.
 
-I love coffee, open source, old cars, and side projects. When I'm not working, I like mountain biking, watching movies, and **riding in my bettles**.
+I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **Beatles**.
+
 
 ## Career
 
