@@ -18,6 +18,9 @@ other = "Arquivo"
 [home]
 other = "Início"
 
+[about]
+other = "Sobre"
+
 [notFound]
 other = "Oops, página não encontrada…"
 
