@@ -41,6 +41,10 @@ disableHugoGeneratorInject = false
 
 [blackfriday]
   hrefTargetBlank = true
+  extensions = [
+    "laxHtmlBlocks",
+    "hardLineBreak", 
+  ]
 
 [taxonomies]
   tag      = "tags"
