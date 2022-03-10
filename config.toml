@@ -59,9 +59,9 @@ disableHugoGeneratorInject = false
 
   # Metadata mostly used in document's head
   # 
-  description = "Nice theme for homepages and blogs"
+  description = "Rafael Pazini, Software engineer, caipira do interior paulista 🇧🇷, Open Source enthusiast and "I think I am an interesting person"."
   keywords = ""
-  images = [""]
+  images = ["https://pbs.twimg.com/profile_images/1198375649968377856/_uji6FKJ_400x400.jpg"]
 
   # Home subtitle of the index page.
   #
