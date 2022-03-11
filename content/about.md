@@ -14,6 +14,10 @@ I’m originally from Brazil and now living in São Paulo with my girlfriend and
 
 I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **Beatles**.
 
+## Bio
+
+
+
 
 ## Career
 
@@ -70,5 +74,6 @@ May 13 - Oct 15 • 2 yrs 6 mos
 {{< line_break >}}
 {{< line_break >}}
 {{< line_break >}}
+
 
 {{< button_style "/docs/Resume.pdf" "Dowload my resume">}}
