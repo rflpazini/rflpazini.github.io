@@ -177,9 +177,13 @@ disableHugoGeneratorInject = false
     name = "linkedin"
     url  = "https://www.linkedin.com/in/rflpazini"
 
-#  [[params.social]]
-#    name = "stackoverflow"
-#    url  = "https://stackoverflow.com/users/3987491/rflpazini"
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/3987491/rflpazini"
+
+  [[params.social]]
+    name = "instagram"
+    url  = "https://www.instagram.com/rflpazini/"
 
 #  [[params.social]]
 #    name = "email"
