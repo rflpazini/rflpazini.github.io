@@ -68,7 +68,7 @@ a.button {
     }
 
     :hover {
-      transform: none;
+      transform: $dark-background-secondary;
       box-shadow: none;
     }
   }
