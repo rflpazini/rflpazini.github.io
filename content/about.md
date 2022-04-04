@@ -12,7 +12,7 @@ Now my career is focused on Backend development. I’m currently **Software Engi
 
 I’m originally from Brazil and now living in São Paulo with my girlfriend and nice plants.
 
-I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **Beatles**.
+I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **Beetles**.
 
 <!-- ## Bio
 
