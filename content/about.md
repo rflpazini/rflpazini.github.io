@@ -8,11 +8,11 @@ draft: false
 
 **Hey, I’m Rafael Pazini**. I started as a software engineer back in 2011, working with Flash, AS3 to be more exact.
 
-Now my career is focused on Backend development. I’m currently **Software Engineer** at a digital face ID startup, Único. Before that, I worked at Mercado Libre as SWE developing the new checkout flow for the biggest market place in Latim America. 
+Now my career is focused on Backend development. I’m currently **Software Engineer** at a streaming platform, Pluto Tv. Before that, I worked at Mercado Libre as SWE developing the new checkout flow for the biggest market place in Latim America. 
 
-I’m originally from Brazil and now living in São Paulo with my girlfriend and nice plants.
+I'm from Brazil and live in São Paulo with my girlfriend, our lovely dog, and nice plants.
 
-I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **Beetles**.
+I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **VW Bugs**.
 
 <!-- ## Bio
 
@@ -23,9 +23,18 @@ I love coffee, open source, old cars, and side projects. When I’m not working,
 
 **Software Engineer**
 
-[único](https://unico.io/) • São Paulo, Brazil
+[Pluto TV](https://pluto.tv/) • Los Angeles, California
 
-Jun 21 - Present • 10 mos
+Jun 22 - Present
+{{< line_break >}}
+{{< line_break >}}
+{{< line_break >}}
+
+**Software Engineer**
+
+[Único](https://unico.io/) • São Paulo, Brazil
+
+Jun 21 - Mar 2022 • 10 mos
 {{< line_break >}}
 {{< line_break >}}
 {{< line_break >}}
