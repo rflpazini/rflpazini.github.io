@@ -166,6 +166,10 @@ disableHugoGeneratorInject = false
     url  = "https://twitter.com/rflpazini"
 
   [[params.social]]
+    name = "dev"
+    url  = "https://dev.to/rflpazini/"
+
+  [[params.social]]
     name = "medium"
     url  = "https://medium.com/@rflpazini"
 
@@ -176,19 +180,6 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/rflpazini"
-
-  [[params.social]]
-    name = "stackoverflow"
-    url  = "https://stackoverflow.com/users/3987491/rflpazini"
-
-  [[params.social]]
-    name = "instagram"
-    url  = "https://www.instagram.com/rflpazini/"
-
- [[params.social]]
-    name = "dev.to"
-    url  = "https://dev.to/rflpazini/"
-  
 
 [languages]
   [languages.en]
