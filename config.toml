@@ -185,9 +185,9 @@ disableHugoGeneratorInject = false
     name = "instagram"
     url  = "https://www.instagram.com/rflpazini/"
 
-#  [[params.social]]
-#    name = "email"
-#    url  = "mailto:rflpazini@gmail.com"
+ [[params.social]]
+    name = "dev.to"
+    url  = "https://dev.to/rflpazini/"
   
 
 [languages]
