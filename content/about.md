@@ -85,4 +85,4 @@ May 13 - Oct 15 • 2 yrs 6 mos
 {{< line_break >}}
 
 
-{{< button_style "/docs/Resume.pdf" "Dowload my resume">}}
+{{< button_style "/docs/rflpazini_resume.pdf" "Dowload my resume">}}
