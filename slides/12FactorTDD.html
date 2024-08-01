@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>12 Factor App + TDD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/night.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <style>
+        pre code {
+            white-space: pre-wrap;       /* Since CSS 2.1 */
+            white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>12 Factor App + TDD</h1>
+                <p>Construindo Aplicações Robustas e Escaláveis</p>
+            </section>
+
+            <section>
+                <h2>Rafael Pazini</h2>
+                <div style="display: flex;">
+                    <img src="https://i.imgur.com/cnLj286.jpg" alt="Foto do Palestrante" style="border-radius: 50%; width: 50%; margin-right: 50px;">
+                    <div style="text-align: left;">
+                        <ul>
+                            <li>Pós-graduando em IA & Big Data - USP</li>
+                            <li>Formado em Ciência da Computação - UNIP</li>
+                            <li>Engenheiro de software com mais de 10 anos de experiência em desenvolvimento de aplicações backend de alta performance. </li>
+                            <li>Atualmente na PlutoTV como Senior Software Engineer.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>O que é 12 Factor App?</h2>
+                <ul>
+                    <li>Conjunto de práticas para construir aplicações SaaS escaláveis e mantíveis</li>
+                    <li>Criado por desenvolvedores da Heroku</li>
+                    <li>Promove melhores práticas de desenvolvimento e operação de software</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><a href="https://12factor.net/" target="_blank">Os 12 Fatores</a></h2>
+                <ul>
+                    <li>1. Codebase</li>
+                    <li>2. Dependencies</li>
+                    <li>3. Config</li>
+                    <li>4. Backing Services</li>
+                    <li>5. Build, Release, Run</li>
+                    <li>6. Processes</li>
+                    <li>7. Port Binding</li>
+                    <li>8. Concurrency</li>
+                    <li>9. Disposability</li>
+                    <li>10. Dev/Prod Parity</li>
+                    <li>11. Logs</li>
+                    <li>12. Admin Processes</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>1. Codebase</h2>
+                <p>Uma base de código rastreada em controle de versão, muitas implantações</p>
+                <ul>
+                    <li>Todo o código de uma aplicação deve estar em um único repositório de controle de versão.</li>
+                    <li>Cada commit pode ser implantado em múltiplos ambientes (desenvolvimento, teste, produção).</li>
+                    <li>Facilita a gestão de versões e a colaboração entre desenvolvedores.</li>
+                </ul>
+                <pre><code class="sh hljs">
+git init
+git add .
+git commit -m "Initial commit"
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>2. Dependencies</h2>
+                <p>Declare e isole dependências</p>
+                <ul>
+                    <li>Todas as dependências da aplicação devem ser explicitamente declaradas e gerenciadas.</li>
+                    <li>Facilita a replicação do ambiente de desenvolvimento e produção, garantindo consistência.</li>
+                </ul>
+                <pre><code class="go hljs">
+// go.mod
+module myapp
+
+go 1.22
+
+require (
+    github.com/labstack/echo/v4 v4.6.3
+)
+                </code></pre>
+                <pre><code class="sh hljs">
+go mod tidy
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>3. Config</h2>
+                <p>Armazene a configuração no ambiente</p>
+                <ul>
+                    <li>Configurações, como credenciais de banco de dados ou chaves de API, devem ser armazenadas em variáveis de ambiente.</li>
+                    <li>Aumenta a segurança e facilita a mudança de configurações entre diferentes ambientes.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "fmt"
+    "os"
+)
+
+func main() {
+    dbURL := os.Getenv("DATABASE_URL")
+    fmt.Println("Database URL:", dbURL)
+}
+                </code></pre>
+                <pre><code class="sh hljs">
+export DATABASE_URL="postgres://user:password@localhost/db"
+go run main.go
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>4. Backing Services</h2>
+                <p>Trate serviços de apoio como recursos anexados</p>
+                <ul>
+                    <li>Serviços de apoio, como bancos de dados, sistemas de fila, cache, etc., devem ser tratados como recursos anexados que podem ser facilmente substituídos.</li>
+                    <li>Aumenta a portabilidade e facilita a troca de serviços de apoio.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "fmt"
+    "os"
+)
+
+func main() {
+    redisURL := os.Getenv("REDIS_URL")
+    fmt.Println("Redis URL:", redisURL)
+}
+                </code></pre>
+                <pre><code class="sh hljs">
+export REDIS_URL="redis://localhost:6379"
+go run main.go
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>5. Build, Release, Run</h2>
+                <p>Separe estritamente os estágios de construção e execução</p>
+                <ul>
+                    <li>O processo de implantação deve ser dividido em três estágios: build, release, e run.</li>
+                    <ul>
+                        <li><strong>Build:</strong> Converte o código-fonte em um executável.</li>
+                        <li><strong>Release:</strong> Combina o executável com a configuração específica do ambiente.</li>
+                        <li><strong>Run:</strong> Executa a aplicação no ambiente.</li>
+                    </ul>
+                    <li>Garante que a mesma versão do código seja testada e implantada em produção.</li>
+                </ul>
+                <pre><code class="dockerfile hljs">
+# Build stage
+FROM golang:1.22 AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o myapp
+
+# Run stage
+FROM alpine:latest
+WORKDIR /root/
+COPY --from=builder /app/myapp .
+CMD ["./myapp"]
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>6. Processes</h2>
+                <p>Execute a aplicação como um ou mais processos sem estado</p>
+                <ul>
+                    <li>A aplicação deve ser executada como um ou mais processos que não mantêm estado persistente entre as execuções.</li>
+                    <li>Qualquer estado deve ser armazenado em um serviço de apoio.</li>
+                    <li>Facilita a escalabilidade e a recuperação de falhas.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "github.com/labstack/echo/v4"
+)
+
+func main() {
+    e := echo.New()
+    e.GET("/ping", func(c echo.Context) error {
+        return c.String(200, "pong")
+    })
+    e.Start(":8080")
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>7. Port Binding</h2>
+                <p>Exporte serviços via ligação de porta</p>
+                <ul>
+                    <li>A aplicação deve ser auto-suficiente e expor seus serviços via ligação de porta, sem depender de servidores web externos.</li>
+                    <li>Simplifica a configuração e a implantação.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "github.com/labstack/echo/v4"
+)
+
+func main() {
+    e := echo.New()
+    e.GET("/ping", func(c echo.Context) error {
+        return c.String(200, "pong")
+    })
+    e.Start(":8080")
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>8. Concurrency</h2>
+                <p>Escale por meio do modelo de processo</p>
+                <ul>
+                    <li>A aplicação deve ser projetada para escalar horizontalmente, executando múltiplas instâncias (processos) em paralelo.</li>
+                    <li>Facilita a escalabilidade e melhora a performance.</li>
+                </ul>
+                <pre><code class="yaml hljs">
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: myapp:latest
+        ports:
+        - containerPort: 8080
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>9. Disposability</h2>
+                <p>Maximize a robustez com inicialização rápida e encerramento gracioso</p>
+                <ul>
+                    <li>A aplicação deve iniciar e parar rapidamente, suportando encerramento gracioso (graceful shutdown) para evitar perda de dados.</li>
+                    <li>Melhora a robustez e facilita o gerenciamento de processos.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "context"
+    "log"
+    "net/http"
+    "os"
+    "os/signal"
+    "time"
+
+    "github.com/labstack/echo/v4"
+)
+
+func main() {
+    e := echo.New()
+    e.GET("/ping", func(c echo.Context) error {
+        return c.String(200, "pong")
+    })
+
+    go func() {
+        if err := e.Start(":8080"); err != nil && err != http.ErrServerClosed {
+            log.Fatalf("shutting down the server: %v", err)
+        }
+    }()
+
+    quit := make(chan os.Signal, 1)
+    signal.Notify(quit, os.Interrupt)
+    <-quit
+    log.Println("Shutting down server...")
+
+    ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+    defer cancel()
+    if err := e.Shutdown(ctx); err != nil {
+        log.Fatal("Server forced to shutdown:", err)
+    }
+
+    log.Println("Server exiting")
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>10. Dev/Prod Parity</h2>
+                <p>Mantenha o desenvolvimento, o teste e a produção o mais semelhante possível</p>
+                <ul>
+                    <li>Os ambientes de desenvolvimento, teste e produção devem ser o mais semelhantes possível para evitar "surpresas" na produção.</li>
+                    <li>Reduz riscos e inconsistências entre ambientes.</li>
+                </ul>
+                <pre><code class="dockerfile hljs">
+# Dockerfile para desenvolvimento e produção
+FROM golang:1.22
+
+WORKDIR /app
+COPY . .
+
+RUN go build -o myapp
+
+CMD ["./myapp"]
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>11. Logs</h2>
+                <p>Trate logs como fluxos de eventos</p>
+                <ul>
+                    <li>A aplicação deve tratar logs como fluxos de eventos contínuos e não se preocupar com o armazenamento ou a roteamento dos logs.</li>
+                    <li>Facilita a centralização e a análise de logs.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "log"
+    "net/http"
+
+    "github.com/labstack/echo/v4"
+)
+
+func main() {
+    e := echo.New()
+    e.GET("/ping", func(c echo.Context) error {
+        log.Println("Received request for /ping")
+        return c.String(200, "pong")
+    })
+    log.Fatal(e.Start(":8080"))
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>12. Admin Processes</h2>
+                <p>Execute tarefas de administração/gerenciamento como processos únicos</p>
+                <ul>
+                    <li>Tarefas administrativas (como migrações de banco de dados) devem ser executadas como processos únicos e independentes do ciclo de vida da aplicação.</li>
+                    <li>Facilita a execução de tarefas administrativas sem interromper o serviço principal.</li>
+                </ul>
+                <pre><code class="go hljs">
+package main
+
+import (
+    "database/sql"
+    "fmt"
+    _ "github.com/lib/pq"
+)
+
+func main() {
+    db, err := sql.Open("postgres", "user=username dbname=mydb sslmode=disable")
+    if err != nil {
+        panic(err)
+    }
+    defer db.Close()
+
+    _, err = db.Exec("ALTER TABLE mytable ADD COLUMN newcolumn TEXT")
+    if err != nil {
+        panic(err)
+    }
+
+    fmt.Println("Migration completed successfully")
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Mão no código...</h2>
+                <iframe src="https://giphy.com/embed/7NoNw4pMNTvgc" width="480" height="480" style="margin: 100px;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/content-7NoNw4pMNTvgc"></a></p>
+            </section>
+
+            <section>
+                <h2>Test-Driven Development (TDD)</h2>
+                <p>Abordagem de desenvolvimento onde os testes são escritos antes do código funcional</p>
+                <ul>
+                    <li>Reduz bugs e melhora a qualidade do código</li>
+                    <li>Facilita a manutenção e refatoração do código</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>O Ciclo TDD</h2>
+                <ul>
+                    <li>Escreva um teste que falhe</li>
+                    <li>Escreva o código mínimo necessário para passar o teste</li>
+                    <li>Refatore o código para padrões aceitáveis</li>
+                </ul>
+                <img src="https://i.imgur.com/tHPbkK2.png alt="Ciclo TDD" style="width: 80%; margin-top: 100px;">
+            </section>
+
+            <section>
+                <h2>Exemplo de TDD em Go</h2>
+                <p>Vamos criar uma função simples para adicionar dois números e escrever testes para ela.</p>
+                <pre><code class="go hljs">
+package main
+
+import "fmt"
+
+// Add function
+func Add(a, b int) int {
+    return a + b
+}
+
+func main() {
+    fmt.Println(Add(2, 3))
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Escrevendo Testes</h2>
+                <pre><code class="go hljs">
+package main
+
+import "testing"
+
+// TestAdd function
+func TestAdd(t *testing.T) {
+    result := Add(2, 3)
+    if result != 5 {
+        t.Errorf("Add(2, 3) = %d; want 5", result)
+    }
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Table-Driven Tests</h2>
+                <p>Usando Table-Driven Tests para melhorar a legibilidade e manutenção dos testes</p>
+                <pre><code class="go hljs">
+package main
+
+import "testing"
+
+// TestAdd function with Table-Driven Tests
+func TestAdd(t *testing.T) {
+    var tests = []struct {
+        a, b, expected int
+    }{
+        {1, 1, 2},
+        {2, 3, 5},
+        {10, 20, 30},
+    }
+
+    for _, tt := range tests {
+        testname := fmt.Sprintf("%d+%d", tt.a, tt.b)
+        t.Run(testname, func(t *testing.T) {
+            result := Add(tt.a, tt.b)
+            if result != tt.expected {
+                t.Errorf("got %d, want %d", result, tt.expected)
+            }
+        })
+    }
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h2>Benefícios do TDD</h2>
+                <ul>
+                    <li>Maior confiança no código</li>
+                    <li>Facilidade na refatoração</li>
+                    <li>Documentação viva</li>
+                </ul>
+                <p>Leia mais sobre TDD em Go no meu <a href="https://dev.to/rflpazini/tdd-e-table-driven-tests-em-go-4dom" target="_blank">artigo</a>.</p>
+            </section>
+
+            <section>
+                <h2>Perguntas?</h2>
+            </section>
+
+            <section>
+                <h2>Obrigado!</h2>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/go.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/dockerfile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/shell.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+        Reveal.initialize({
+            width: 1920,
+            height: 1080,
+            hash: true,
+            plugins: [ RevealMarkdown, RevealHighlight ]
+        });
+    </script>
+</body>
+</html>
