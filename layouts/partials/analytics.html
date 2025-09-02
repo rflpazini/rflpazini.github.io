@@ -1,0 +1,39 @@
+{{ if .Site.Params.googleAnalytics }}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ .Site.Params.googleAnalytics }}', {
+    page_title: '{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} :: {{ .Site.Title }}{{ end }}',
+    page_location: '{{ .Permalink }}',
+    custom_map: {
+      'custom_dimension1': 'author',
+      'custom_dimension2': 'category',
+      'custom_dimension3': 'tags'
+    }
+  });
+  
+  {{ if .IsPage }}
+  gtag('event', 'page_view', {
+    page_title: '{{ .Title }}',
+    page_location: '{{ .Permalink }}',
+    custom_dimension1: '{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.author.name }}{{ end }}',
+    custom_dimension2: '{{ if .Params.categories }}{{ index .Params.categories 0 }}{{ end }}',
+    custom_dimension3: '{{ if .Params.tags }}{{ delimit .Params.tags ", " }}{{ end }}'
+  });
+  {{ end }}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ .Site.Params.googleAnalytics }}');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ .Site.Params.googleAnalytics }}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+{{ end }}
