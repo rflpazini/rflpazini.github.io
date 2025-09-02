@@ -9,7 +9,12 @@
         <li class="language-selector">
             {{ range $.Translations }}
                 <a href="{{ .Permalink }}" class="language-link" title="{{ .Language }}">
-                    {{ if eq .Language "en" }}🇺🇸 EN{{ else if eq .Language "pt-br" }}🇧🇷 PT{{ else }}{{ .Language }}{{ end }}
+                    {{- $lang := .Language | lower -}}
+                    {{ if eq $lang "en" }}🇺🇸
+                    {{- else if or (eq $lang "pt-br") (eq $lang "pt_br") (eq $lang "ptbr") }}🇧🇷
+                    {{- else if eq $lang "pt" }}🇧🇷
+                    {{- else }}🌐
+                    {{- end }}
                 </a>
             {{ end }}
         </li>
