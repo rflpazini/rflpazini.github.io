@@ -1,0 +1,25 @@
+{
+  "name": "@rflpazini - Personal Blog",
+  "short_name": "@rflpazini",
+  "description": "Rafael Pazini, Software engineer, caipira do interior paulista 🇧🇷, Open Source enthusiast and I think I am an interesting person.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b1c1d",
+  "theme_color": "#1b1c1d",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "education", "technology"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

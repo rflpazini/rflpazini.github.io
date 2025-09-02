@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>@rflpazini</title><link>https://rflpazini.com/pt-br/</link><description>Rafael Pazini, Software engineer, caipira do interior paulista 🇧🇷, Open Source enthusiast and I think I am an interesting person.</description><language>pt-br</language><lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><ttl>60</ttl><atom:link href="https://rflpazini.com/pt-br/" rel="self" type="application/rss+xml"/><item><title>Blog</title><link>https://rflpazini.com/pt-br/blog/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Tue, 02 Sep 2025 00:00:00 +0000</lastmod><guid>https://rflpazini.com/pt-br/blog/</guid><description>Bem-vindo ao meu blog! Aqui você encontra artigos sobre engenharia de software, desenvolvimento backend, Docker, eficiência e produtividade, além de projetos de impressão 3D.
+Últimos Artigos Go 1.25: JSON v2 e Novo GC Aug 20, 2025 por Rafael Pazini Dev.to Chegou o Go 1.25 e, sinceramente, é sobre tempo. Duas mudanças que vão fazer diferença real no seu dia a dia: o JSON v2 experimental que não é uma piada de performance e o GreenteaGC que promete parar de sugar sua CPU. Ler mais → Desbloqueie a Observabilidade: Guia prático com OpenTelemetry e Prometheus Oct 17, 2024 por Rafael Pazini Dev.to Neste artigo, implementamos observabilidade em uma aplicação Go utilizando OpenTelemetry, Prometheus e Jaeger. Exploramos o motivo de usar cada uma dessas ferramentas e detalhamos como configurar métricas e tracing de forma eficiente. Ler mais → LocalStack e Docker: Como aumentar a produtividade no desenvolvimento LOCAL sem custos Oct 8, 2024 por Rafael Pazini Dev.to Desenvolver aplicações que interagem com serviços da AWS pode ser um desafio. O LocalStack surge como uma solução poderosa para emular serviços da AWS localmente, permitindo que você desenvolva e teste seu código de forma eficiente. Ler mais → Ver todos os artigos no Dev.to → por Rafael Pazini Dev.to Acesse meu perfil completo no Dev.to para ver todos os artigos sobre Go, Docker, observabilidade, produtividade e muito mais! Visitar perfil completo → Categorias Backend Engineering - Arquiteturas de alta escala e sistemas robustos Docker &amp; Containers - Containerização e melhores práticas Productivity - Dicas de eficiência e produtividade 3D Printing - Projetos e experiências com impressão 3D Open Source - Contribuições e projetos da comunidade Sobre os Artigos Todos os artigos são publicados originalmente no Dev.to e sincronizados automaticamente aqui. Você também pode me seguir lá para receber as atualizações em tempo real!</description><content:encoded>&lt;p&gt;Bem-vindo ao meu blog! Aqui você encontra artigos sobre engenharia de software, desenvolvimento backend, Docker, eficiência e produtividade, além de projetos de impressão 3D.&lt;/p&gt;
+&lt;h2 id="últimos-artigos"&gt;Últimos Artigos&lt;/h2&gt;
+&lt;div class="devto-posts"&gt;
+&lt;div class="devto-post"&gt;
+&lt;div class="post-header"&gt;
+&lt;h3 class="post-title"&gt;
+&lt;a href="https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07" target="_blank" rel="noopener noreferrer"&gt;
+Go 1.25: JSON v2 e Novo GC
+&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="post-meta"&gt;
+&lt;span class="post-date"&gt;Aug 20, 2025&lt;/span&gt;
+&lt;span class="post-author"&gt;por Rafael Pazini&lt;/span&gt;
+&lt;span class="post-platform"&gt;
+&lt;a href="https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07" target="_blank" rel="noopener noreferrer" class="devto-link"&gt;
+&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"&gt;
+&lt;path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/&gt;
+&lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/&gt;
+&lt;/svg&gt;
+Dev.to
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="post-excerpt"&gt;
+Chegou o Go 1.25 e, sinceramente, é sobre tempo. Duas mudanças que vão fazer diferença real no seu dia a dia: o JSON v2 experimental que não é uma piada de performance e o GreenteaGC que promete parar de sugar sua CPU.
+&lt;/div&gt;
+&lt;div class="post-footer"&gt;
+&lt;a href="https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07" target="_blank" rel="noopener noreferrer" class="read-more"&gt;
+Ler mais →
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="devto-post"&gt;
+&lt;div class="post-header"&gt;
+&lt;h3 class="post-title"&gt;
+&lt;a href="https://dev.to/rflpazini/desbloqueie-a-observabilidade-guia-pratico-com-opentelemetry-e-prometheus-1pbc" target="_blank" rel="noopener noreferrer"&gt;
+Desbloqueie a Observabilidade: Guia prático com OpenTelemetry e Prometheus
+&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="post-meta"&gt;
+&lt;span class="post-date"&gt;Oct 17, 2024&lt;/span&gt;
+&lt;span class="post-author"&gt;por Rafael Pazini&lt;/span&gt;
+&lt;span class="post-platform"&gt;
+&lt;a href="https://dev.to/rflpazini/desbloqueie-a-observabilidade-guia-pratico-com-opentelemetry-e-prometheus-1pbc" target="_blank" rel="noopener noreferrer" class="devto-link"&gt;
+&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"&gt;
+&lt;path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/&gt;
+&lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/&gt;
+&lt;/svg&gt;
+Dev.to
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="post-excerpt"&gt;
+Neste artigo, implementamos observabilidade em uma aplicação Go utilizando OpenTelemetry, Prometheus e Jaeger. Exploramos o motivo de usar cada uma dessas ferramentas e detalhamos como configurar métricas e tracing de forma eficiente.
+&lt;/div&gt;
+&lt;div class="post-footer"&gt;
+&lt;a href="https://dev.to/rflpazini/desbloqueie-a-observabilidade-guia-pratico-com-opentelemetry-e-prometheus-1pbc" target="_blank" rel="noopener noreferrer" class="read-more"&gt;
+Ler mais →
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="devto-post"&gt;
+&lt;div class="post-header"&gt;
+&lt;h3 class="post-title"&gt;
+&lt;a href="https://dev.to/rflpazini/localstack-e-docker-como-aumentar-a-produtividade-no-desenvolvimento-local-sem-custos-m2c" target="_blank" rel="noopener noreferrer"&gt;
+LocalStack e Docker: Como aumentar a produtividade no desenvolvimento LOCAL sem custos
+&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="post-meta"&gt;
+&lt;span class="post-date"&gt;Oct 8, 2024&lt;/span&gt;
+&lt;span class="post-author"&gt;por Rafael Pazini&lt;/span&gt;
+&lt;span class="post-platform"&gt;
+&lt;a href="https://dev.to/rflpazini/localstack-e-docker-como-aumentar-a-produtividade-no-desenvolvimento-local-sem-custos-m2c" target="_blank" rel="noopener noreferrer" class="devto-link"&gt;
+&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"&gt;
+&lt;path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/&gt;
+&lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/&gt;
+&lt;/svg&gt;
+Dev.to
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="post-excerpt"&gt;
+Desenvolver aplicações que interagem com serviços da AWS pode ser um desafio. O LocalStack surge como uma solução poderosa para emular serviços da AWS localmente, permitindo que você desenvolva e teste seu código de forma eficiente.
+&lt;/div&gt;
+&lt;div class="post-footer"&gt;
+&lt;a href="https://dev.to/rflpazini/localstack-e-docker-como-aumentar-a-produtividade-no-desenvolvimento-local-sem-custos-m2c" target="_blank" rel="noopener noreferrer" class="read-more"&gt;
+Ler mais →
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="devto-post featured-post"&gt;
+&lt;div class="post-header"&gt;
+&lt;h3 class="post-title"&gt;
+&lt;a href="https://dev.to/rflpazini" target="_blank" rel="noopener noreferrer"&gt;
+Ver todos os artigos no Dev.to →
+&lt;/a&gt;
+&lt;/h3&gt;
+&lt;div class="post-meta"&gt;
+&lt;span class="post-author"&gt;por Rafael Pazini&lt;/span&gt;
+&lt;span class="post-platform"&gt;
+&lt;a href="https://dev.to/rflpazini" target="_blank" rel="noopener noreferrer" class="devto-link"&gt;
+&lt;svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"&gt;
+&lt;path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/&gt;
+&lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/&gt;
+&lt;/svg&gt;
+Dev.to
+&lt;/a&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="post-excerpt"&gt;
+Acesse meu perfil completo no Dev.to para ver todos os artigos sobre Go, Docker, observabilidade, produtividade e muito mais!
+&lt;/div&gt;
+&lt;div class="post-footer"&gt;
+&lt;a href="https://dev.to/rflpazini" target="_blank" rel="noopener noreferrer" class="read-more"&gt;
+Visitar perfil completo →
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.devto-posts {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+.devto-post {
+border: 1px solid #e1e5e9;
+border-radius: 8px;
+padding: 1.5rem;
+background: #fff;
+transition: all 0.2s ease;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.devto-post:hover {
+border-color: #007acc;
+box-shadow: 0 4px 12px rgba(0,123,204,0.15);
+transform: translateY(-2px);
+}
+.devto-post.featured-post {
+border-color: #007acc;
+background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+}
+.post-header {
+margin-bottom: 1rem;
+}
+.post-title {
+margin: 0 0 0.5rem 0;
+font-size: 1.25rem;
+line-height: 1.4;
+}
+.post-title a {
+color: #2c3e50;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+.post-title a:hover {
+color: #007acc;
+}
+.post-meta {
+display: flex;
+align-items: center;
+gap: 1rem;
+font-size: 0.875rem;
+color: #6c757d;
+flex-wrap: wrap;
+}
+.post-platform {
+margin-left: auto;
+}
+.devto-link {
+display: inline-flex;
+align-items: center;
+gap: 0.25rem;
+color: #007acc;
+text-decoration: none;
+font-weight: 500;
+padding: 0.25rem 0.5rem;
+border-radius: 4px;
+background: rgba(0,122,204,0.1);
+transition: all 0.2s ease;
+}
+.devto-link:hover {
+background: rgba(0,122,204,0.2);
+color: #005a8b;
+}
+.post-excerpt {
+color: #495057;
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+.post-footer {
+display: flex;
+justify-content: flex-end;
+}
+.read-more {
+color: #007acc;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s ease;
+}
+.read-more:hover {
+color: #005a8b;
+}
+@media (max-width: 768px) {
+.devto-post {
+padding: 1rem;
+}
+.post-meta {
+flex-direction: column;
+align-items: flex-start;
+gap: 0.5rem;
+}
+.post-platform {
+margin-left: 0;
+}
+}
+&lt;/style&gt;
+&lt;h2 id="categorias"&gt;Categorias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Backend Engineering&lt;/strong&gt; - Arquiteturas de alta escala e sistemas robustos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker &amp;amp; Containers&lt;/strong&gt; - Containerização e melhores práticas&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Productivity&lt;/strong&gt; - Dicas de eficiência e produtividade&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3D Printing&lt;/strong&gt; - Projetos e experiências com impressão 3D&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open Source&lt;/strong&gt; - Contribuições e projetos da comunidade&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="sobre-os-artigos"&gt;Sobre os Artigos&lt;/h2&gt;
+&lt;p&gt;Todos os artigos são publicados originalmente no &lt;a href="https://dev.to/rflpazini"&gt;Dev.to&lt;/a&gt; e sincronizados automaticamente aqui. Você também pode me seguir lá para receber as atualizações em tempo real!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Quer sugerir um tema para um próximo artigo? Me envie uma mensagem no &lt;a href="https://www.linkedin.com/in/rflpazini"&gt;LinkedIn&lt;/a&gt; ou &lt;a href="https://twitter.com/rflpazini"&gt;Twitter&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Projetos</title><link>https://rflpazini.com/pt-br/projects/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Tue, 02 Sep 2025 00:00:00 +0000</lastmod><guid>https://rflpazini.com/pt-br/projects/</guid><description>Bem-vindo à seção de projetos! Aqui você encontra contribuições open source, side projects e ferramentas que criei para resolver problemas reais.
+Contribuições Open Source Projetos Docker Captain
+Vários projetos relacionados ao Docker e contribuições para o ecossistema Docker, incluindo melhores práticas, tutoriais e ferramentas da comunidade.
+Perfil GitHub
+github.com/rflpazini • Contribuidor ativo
+Confira meu perfil no GitHub para as últimas contribuições, forks e projetos colaborativos.
+Side Projects Ferramentas de Impressão 3D</description><content:encoded>&lt;p&gt;Bem-vindo à seção de projetos! Aqui você encontra contribuições open source, side projects e ferramentas que criei para resolver problemas reais.&lt;/p&gt;
+&lt;h2 id="contribuições-open-source"&gt;Contribuições Open Source&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Projetos Docker Captain&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Vários projetos relacionados ao Docker e contribuições para o ecossistema Docker, incluindo melhores práticas, tutoriais e ferramentas da comunidade.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Perfil GitHub&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/rflpazini"&gt;github.com/rflpazini&lt;/a&gt; • Contribuidor ativo&lt;/p&gt;
+&lt;p&gt;Confira meu perfil no GitHub para as últimas contribuições, forks e projetos colaborativos.&lt;/p&gt;
+&lt;h2 id="side-projects"&gt;Side Projects&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ferramentas de Impressão 3D&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ferramentas e utilitários personalizados para fluxos de trabalho de impressão 3D, incluindo configurações de slicer, scripts de otimização de impressão e recursos da comunidade.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ferramentas de Produtividade&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ferramentas e scripts de produtividade pessoal que ajudam a otimizar fluxos de trabalho de desenvolvimento e tarefas diárias.&lt;/p&gt;
+&lt;h2 id="contribuições-para-a-comunidade"&gt;Contribuições para a Comunidade&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Comunidade Docker&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Participação ativa em discussões da comunidade Docker, ajudando com melhores práticas, resolução de problemas e compartilhamento de conhecimento.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Engenharia de Backend&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Contribuições para discussões de engenharia de backend, padrões de arquitetura e técnicas de otimização de performance.&lt;/p&gt;
+&lt;h2 id="projetos-em-destaque"&gt;Projetos em Destaque&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Mais detalhes dos projetos em breve!&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Interessado em colaborar em um projeto? Vamos nos conectar no &lt;a href="https://github.com/rflpazini"&gt;GitHub&lt;/a&gt; ou &lt;a href="https://www.linkedin.com/in/rflpazini"&gt;LinkedIn&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Recursos</title><link>https://rflpazini.com/pt-br/resources/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Tue, 02 Sep 2025 00:00:00 +0000</lastmod><guid>https://rflpazini.com/pt-br/resources/</guid><description>Bem-vindo à seção de recursos! Aqui você encontra uma coleção curada de ferramentas, livros, artigos e recursos que me ajudaram na minha jornada de engenharia de software.
+Engenharia de Backend Padrões de Arquitetura
+Microservices Patterns - Chris Richardson Building Microservices - Sam Newman Designing Data-Intensive Applications - Martin Kleppmann Performance &amp; Escalabilidade
+High Performance Browser Networking - Ilya Grigorik Systems Performance - Brendan Gregg Database Internals - Alex Petrov Docker &amp; Containers Documentação Oficial</description><content:encoded>&lt;p&gt;Bem-vindo à seção de recursos! Aqui você encontra uma coleção curada de ferramentas, livros, artigos e recursos que me ajudaram na minha jornada de engenharia de software.&lt;/p&gt;
+&lt;h2 id="engenharia-de-backend"&gt;Engenharia de Backend&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Padrões de Arquitetura&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Microservices Patterns&lt;/strong&gt; - Chris Richardson&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Building Microservices&lt;/strong&gt; - Sam Newman&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Designing Data-Intensive Applications&lt;/strong&gt; - Martin Kleppmann&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Performance &amp;amp; Escalabilidade&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;High Performance Browser Networking&lt;/strong&gt; - Ilya Grigorik&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Systems Performance&lt;/strong&gt; - Brendan Gregg&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Database Internals&lt;/strong&gt; - Alex Petrov&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="docker--containers"&gt;Docker &amp;amp; Containers&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Documentação Oficial&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/"&gt;Documentação Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/develop/dev-best-practices/"&gt;Melhores Práticas Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/"&gt;Documentação Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Recursos de Aprendizado&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Docker Deep Dive&lt;/strong&gt; - Nigel Poulton&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Kubernetes Up &amp;amp; Running&lt;/strong&gt; - Kelsey Hightower&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Container Security&lt;/strong&gt; - Liz Rice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="produtividade--ferramentas"&gt;Produtividade &amp;amp; Ferramentas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ferramentas de Desenvolvimento&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VS Code&lt;/strong&gt; - Editor de código com extensões Docker&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker Desktop&lt;/strong&gt; - Ambiente de desenvolvimento local&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Postman&lt;/strong&gt; - Testes e desenvolvimento de APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Métodos de Produtividade&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Getting Things Done&lt;/strong&gt; - David Allen&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deep Work&lt;/strong&gt; - Cal Newport&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Atomic Habits&lt;/strong&gt; - James Clear&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="impressão-3d"&gt;Impressão 3D&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Software &amp;amp; Ferramentas&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PrusaSlicer&lt;/strong&gt; - Software de slicing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cura&lt;/strong&gt; - Software alternativo de slicing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fusion 360&lt;/strong&gt; - Design CAD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Recursos de Aprendizado&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;3D Printing Handbook&lt;/strong&gt; - Vários autores&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make: 3D Printing&lt;/strong&gt; - Mark Frauenfelder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="leitura-recomendada"&gt;Leitura Recomendada&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Engenharia de Software&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Clean Code&lt;/strong&gt; - Robert C. Martin&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Pragmatic Programmer&lt;/strong&gt; - David Thomas &amp;amp; Andrew Hunt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Code Complete&lt;/strong&gt; - Steve McConnell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Carreira &amp;amp; Crescimento&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Staff Engineer&lt;/strong&gt; - Will Larson&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The Manager&amp;rsquo;s Path&lt;/strong&gt; - Camille Fournier&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Accelerate&lt;/strong&gt; - Nicole Forsgren, Jez Humble, Gene Kim&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Tem um recurso para sugerir? Me envie uma mensagem no &lt;a href="https://www.linkedin.com/in/rflpazini"&gt;LinkedIn&lt;/a&gt; ou &lt;a href="https://twitter.com/rflpazini"&gt;Twitter&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Slides de Palestras</title><link>https://rflpazini.com/pt-br/slides/</link><pubDate>Thu, 01 Aug 2024 10:52:43 -0300</pubDate><lastmod>Thu, 01 Aug 2024 10:52:43 -0300</lastmod><guid>https://rflpazini.com/pt-br/slides/</guid><description> 12 Factor + TDD</description><content:encoded>&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rflpazini.com/slides/12FactorTDD.html"&gt;12 Factor + TDD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item></channel></rss>

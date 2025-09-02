@@ -1,0 +1,5 @@
+Contact: mailto:security@rflpazini.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, pt-BR
+Canonical: https://rflpazini.com/.well-known/security.txt
+Policy: https://rflpazini.com/security-policy
