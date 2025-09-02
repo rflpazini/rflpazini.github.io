@@ -4,7 +4,7 @@ date: 2022-03-10T14:52:43-03:00
 draft: false
 ---
 
-{{< image src="https://i.imgur.com/cnLj286.jpg" alt="Hello Friend" position="left" style="border-radius: 8px; margin-right: 35px; margin-bottom: 35px; margin-top: 25px; max-width: 100%;width: 336px; float: left;-webkit-filter: grayscale(100%); filter: grayscale(100%);" >}}
+{{< image src="/images/profile.jpg" alt="Hello Friend" position="left" style="border-radius: 8px; margin-right: 35px; margin-bottom: 35px; margin-top: 25px; max-width: 100%;width: 336px; float: left;-webkit-filter: grayscale(100%); filter: grayscale(100%);" >}}
 
 **Hey, I'm Rafael Pazini**. I started as a software engineer back in 2011, working with Flash, AS3 to be more exact.
 
