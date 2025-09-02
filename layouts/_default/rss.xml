@@ -1,0 +1,42 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} :: {{ .Site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ if .Params.Description }}{{ .Params.Description }}{{ else }}{{ .Summary | plainify }}{{ end }}{{ end }}</description>
+    <language>{{ .Site.Language.LanguageCode }}</language>
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+    <ttl>60</ttl>
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
+    {{ range .Data.Pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <lastmod>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastmod>
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Summary | plainify }}</description>
+      <content:encoded>{{ .Content | html }}</content:encoded>
+      {{ if .Params.cover }}
+      <media:content url="{{ .Params.cover | absURL }}" medium="image" />
+      {{ end }}
+      {{ if .Params.author }}
+      <dc:creator>{{ .Params.author }}</dc:creator>
+      {{ else }}
+      <dc:creator>{{ .Site.Params.author.name }}</dc:creator>
+      {{ end }}
+      {{ if .Params.categories }}
+      {{ range .Params.categories }}
+      <category>{{ . }}</category>
+      {{ end }}
+      {{ end }}
+      {{ if .Params.tags }}
+      {{ range .Params.tags }}
+      <category>{{ . }}</category>
+      {{ end }}
+      {{ end }}
+    </item>
+    {{ end }}
+  </channel>
+</rss>

@@ -1,0 +1,13 @@
+/* TEAM */
+    Developer: Rafael Pazini
+    Contact: @rflpazini
+    From: São Paulo, Brazil
+
+/* SITE */
+    Last update: 2025
+    Language: English, Portuguese (Brazil)
+    Doctype: HTML5
+    IDE: Cursor
+    Standards: HTML5, CSS3, JavaScript
+    Components: Hugo, hello-friend-ng theme
+    Software: Hugo Static Site Generator

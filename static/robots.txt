@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://rflpazini.com/sitemap.xml
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /about/
+Allow: /slides/
+Allow: /posts/
+Allow: /tags/
+Allow: /categories/
+
+# Crawl delay (optional)
+Crawl-delay: 1

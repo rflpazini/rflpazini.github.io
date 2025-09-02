@@ -14,6 +14,34 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 # googleAnalytics = ""
 # disqusShortname = ""
 
+# SEO and Performance Settings
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = true
+
+# Sitemap configuration
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+# RSS configuration
+[outputFormats]
+  [outputFormats.rss]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+    isPlainText = true
+    notAlternative = true
+
+# Performance optimizations
+minify = true
+minifyOutput = true
+
 archetypeDir = "archetypes"
 contentDir   = "content"
 dataDir      = "data"
@@ -53,6 +81,9 @@ disableHugoGeneratorInject = false
   series   = "series"
 
 [params]
+  # Language and Navigation
+  EnableGlobalLanguageMenu = true
+  
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
@@ -61,8 +92,38 @@ disableHugoGeneratorInject = false
   # Metadata mostly used in document's head
   # 
   description = "Rafael Pazini, Software engineer, caipira do interior paulista 🇧🇷, Open Source enthusiast and I think I am an interesting person."
-  keywords = ""
+  keywords = "software engineer, developer, open source, hugo, blog, technology, programming, brazil, pt-br, golang, java, docker"
   images = ["https://i.imgur.com/kwcnABP.jpg"]
+  
+  # SEO Settings
+  seo = true
+  seoTitle = true
+  seoDescription = true
+  seoKeywords = true
+  seoImage = true
+  seoAuthor = true
+  
+  # Open Graph Settings
+  openGraph = true
+  openGraphTitle = true
+  openGraphDescription = true
+  openGraphImage = true
+  openGraphType = "website"
+  
+  # Twitter Card Settings
+  twitterCard = "summary_large_image"
+  twitterSite = "@rflpazini"
+  twitterCreator = "@rflpazini"
+  
+  # Schema.org Settings
+  schema = true
+  schemaType = "Person"
+  
+  # Performance Settings
+  preloadCSS = true
+  preloadJS = true
+  deferCSS = false
+  deferJS = true
 
   # Home subtitle of the index page.
   #
@@ -203,6 +264,54 @@ disableHugoGeneratorInject = false
     name       = "About"
     url        = "about/"
   [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "blog/"
+  [[menu.main]]
+    identifier = "slides"
+    name       = "Slides"
+    url        = "slides/"
+
+[languages.en.menu]
+  [[languages.en.menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[languages.en.menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "blog/"
+  [[languages.en.menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
+  [[languages.en.menu.main]]
+    identifier = "resources"
+    name       = "Resources"
+    url        = "resources/"
+  [[languages.en.menu.main]]
+    identifier = "slides"
+    name       = "Slides"
+    url        = "slides/"
+
+[languages.pt-br.menu]
+  [[languages.pt-br.menu.main]]
+    identifier = "about"
+    name       = "Sobre"
+    url        = "about/"
+  [[languages.pt-br.menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "blog/"
+  [[languages.pt-br.menu.main]]
+    identifier = "projects"
+    name       = "Projetos"
+    url        = "projects/"
+  [[languages.pt-br.menu.main]]
+    identifier = "resources"
+    name       = "Recursos"
+    url        = "resources/"
+  [[languages.pt-br.menu.main]]
     identifier = "slides"
     name       = "Slides"
     url        = "slides/"

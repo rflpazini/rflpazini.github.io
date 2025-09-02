@@ -6,13 +6,15 @@ draft: false
 
 {{< image src="https://i.imgur.com/cnLj286.jpg" alt="Hello Friend" position="left" style="border-radius: 8px; margin-right: 35px; margin-bottom: 35px; margin-top: 25px; max-width: 100%;width: 336px; float: left;-webkit-filter: grayscale(100%); filter: grayscale(100%);" >}}
 
-**Hey, I’m Rafael Pazini**. I started as a software engineer back in 2011, working with Flash, AS3 to be more exact.
+**Hey, I'm Rafael Pazini**. I started as a software engineer back in 2011, working with Flash, AS3 to be more exact.
 
-Now my career is focused on Backend development. I’m currently **Software Engineer** at a streaming platform, Pluto Tv. Before that, I worked at Mercado Libre as SWE developing the new checkout flow for the biggest market place in Latim America. 
+Now my career is focused on Backend development. I'm currently **Software Engineer** at a streaming platform, Pluto Tv. Before that, I worked at Mercado Libre as SWE developing the new checkout flow for the biggest market place in Latin America. 
+
+I'm also a **[Docker Captain](https://www.docker.com/captains/rafael-pazini/)**, passionate about containerization and helping the community with best practices and knowledge sharing.
 
 I'm from Brazil and live in São Paulo with my girlfriend, our lovely dog, and nice plants.
 
-I love coffee, open source, old cars, and side projects. When I’m not working, I like mountain biking, watching movies, and riding in my **VW Bugs**.
+I love coffee, open source, old cars, and side projects. When I'm not working, I like mountain biking, watching movies, and riding in my **VW Bugs**.
 
 <!-- ## Bio
 
