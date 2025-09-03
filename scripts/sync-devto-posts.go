@@ -15,7 +15,6 @@ import (
 	"github.com/mmcdole/gofeed"
 )
 
-// DevtoPost represents a Dev.to post
 type DevtoPost struct {
 	Title   string `json:"title" toml:"title"`
 	URL     string `json:"url" toml:"url"`
@@ -23,19 +22,16 @@ type DevtoPost struct {
 	Excerpt string `json:"excerpt" toml:"excerpt"`
 }
 
-// DataFile represents the TOML structure
 type DataFile struct {
 	Posts []DevtoPost `toml:"posts"`
 }
 
-// Config holds the application configuration
 type Config struct {
 	DevtoUsername string
 	DataFile      string
 	UseRSS        bool
 }
 
-// NewConfig creates a new configuration
 func NewConfig() *Config {
 	return &Config{
 		DevtoUsername: "rflpazini",
