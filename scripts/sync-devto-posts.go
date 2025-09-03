@@ -1,23 +1,3 @@
-// sync-devto-posts - Dev.to posts synchronizer
-//
-// This Go program replaces the Python scripts for synchronizing Dev.to posts.
-// It supports both RSS feed and API methods for fetching posts.
-//
-// Usage:
-//   ./sync-devto-posts           # Use RSS method (default, recommended)
-//   ./sync-devto-posts rss       # Use RSS method explicitly
-//   ./sync-devto-posts api       # Use API method
-//
-// Build:
-//   go build -o sync-devto-posts sync-devto-posts.go
-//
-// Features:
-//   - Fetches latest 10 posts from Dev.to
-//   - Supports both RSS feed and API methods
-//   - Automatic fallback from RSS to API if RSS fails
-//   - Writes data to data/devto_posts.toml in TOML format
-//   - Cross-platform single binary (no Python dependencies needed)
-
 package main
 
 import (
@@ -64,24 +44,17 @@ func NewConfig() *Config {
 	}
 }
 
-// cleanHTML removes HTML tags and cleans the text
 func cleanHTML(text string) string {
-	// Remove HTML tags
 	htmlRegex := regexp.MustCompile(`<[^>]*>`)
 	text = htmlRegex.ReplaceAllString(text, "")
-
-	// Remove extra line breaks and spaces
 	text = regexp.MustCompile(`\n+`).ReplaceAllString(text, " ")
 	text = regexp.MustCompile(`\s+`).ReplaceAllString(text, " ")
-
 	return strings.TrimSpace(text)
 }
 
-// fetchPostsViaAPI fetches posts using the Dev.to API
 func fetchPostsViaAPI(username string) ([]DevtoPost, error) {
 	apiURL := fmt.Sprintf("https://dev.to/api/articles?username=%s&per_page=10", username)
-
-	fmt.Printf("📡 Fetching posts from Dev.to API: %s\n", apiURL)
+	fmt.Printf("Fetching posts from Dev.to API: %s\n", apiURL)
 
 	resp, err := http.Get(apiURL)
 	if err != nil {
@@ -130,11 +103,9 @@ func fetchPostsViaAPI(username string) ([]DevtoPost, error) {
 	return processedPosts, nil
 }
 
-// fetchPostsViaRSS fetches posts using the Dev.to RSS feed
 func fetchPostsViaRSS(username string) ([]DevtoPost, error) {
 	rssURL := fmt.Sprintf("https://dev.to/feed/%s", username)
-
-	fmt.Printf("📡 Fetching RSS feed: %s\n", rssURL)
+	fmt.Printf("Fetching RSS feed: %s\n", rssURL)
 
 	fp := gofeed.NewParser()
 	feed, err := fp.ParseURL(rssURL)
@@ -146,7 +117,7 @@ func fetchPostsViaRSS(username string) ([]DevtoPost, error) {
 		return nil, fmt.Errorf("no posts found in RSS feed")
 	}
 
-	fmt.Printf("📄 Found %d posts in RSS feed\n", len(feed.Items))
+	fmt.Printf("Found %d posts in RSS feed\n", len(feed.Items))
 
 	var processedPosts []DevtoPost
 	limit := 10
@@ -157,7 +128,6 @@ func fetchPostsViaRSS(username string) ([]DevtoPost, error) {
 	for i := 0; i < limit; i++ {
 		item := feed.Items[i]
 
-		// Extract excerpt from content or summary
 		excerpt := ""
 		if item.Description != "" {
 			excerpt = cleanHTML(item.Description)
@@ -165,12 +135,10 @@ func fetchPostsViaRSS(username string) ([]DevtoPost, error) {
 			excerpt = cleanHTML(item.Content)
 		}
 
-		// Limit excerpt size
 		if len(excerpt) > 200 {
 			excerpt = excerpt[:200] + "..."
 		}
 
-		// Parse published date
 		publishedDate := ""
 		if item.PublishedParsed != nil {
 			publishedDate = item.PublishedParsed.Format("2006-01-02")
@@ -190,11 +158,9 @@ func fetchPostsViaRSS(username string) ([]DevtoPost, error) {
 	return processedPosts, nil
 }
 
-// updateDataFile writes the posts to the TOML data file
 func updateDataFile(posts []DevtoPost, dataFile string) error {
-	fmt.Printf("📝 Processing %d posts...\n", len(posts))
+	fmt.Printf("Processing %d posts...\n", len(posts))
 
-	// Validate posts
 	var validPosts []DevtoPost
 	for _, post := range posts {
 		if post.Title == "" {
@@ -207,18 +173,15 @@ func updateDataFile(posts []DevtoPost, dataFile string) error {
 		return fmt.Errorf("no valid posts found")
 	}
 
-	// Create TOML structure
 	data := DataFile{
 		Posts: validPosts,
 	}
 
-	// Ensure directory exists
 	dir := filepath.Dir(dataFile)
 	if err := os.MkdirAll(dir, 0755); err != nil {
 		return fmt.Errorf("failed to create directory: %w", err)
 	}
 
-	// Write TOML file
 	file, err := os.Create(dataFile)
 	if err != nil {
 		return fmt.Errorf("failed to create file: %w", err)
@@ -229,10 +192,9 @@ func updateDataFile(posts []DevtoPost, dataFile string) error {
 		return fmt.Errorf("failed to write TOML file: %w", err)
 	}
 
-	fmt.Printf("✅ File %s updated successfully!\n", dataFile)
-	fmt.Printf("📝 %d posts synchronized\n", len(validPosts))
+	fmt.Printf("File %s updated successfully!\n", dataFile)
+	fmt.Printf("%d posts synchronized\n", len(validPosts))
 
-	// Show titles of first 3 posts
 	for i, post := range validPosts {
 		if i >= 3 {
 			break
@@ -243,10 +205,9 @@ func updateDataFile(posts []DevtoPost, dataFile string) error {
 	return nil
 }
 
-// runAPISync runs the API-based synchronization
 func runAPISync(config *Config) error {
-	fmt.Println("🚀 Starting synchronization with Dev.to via API...")
-	fmt.Printf("👤 User: @%s\n", config.DevtoUsername)
+	fmt.Println("Starting synchronization with Dev.to via API...")
+	fmt.Printf("User: @%s\n", config.DevtoUsername)
 
 	posts, err := fetchPostsViaAPI(config.DevtoUsername)
 	if err != nil {
@@ -257,21 +218,18 @@ func runAPISync(config *Config) error {
 		return fmt.Errorf("failed to update data file: %w", err)
 	}
 
-	fmt.Println("✅ API synchronization completed!")
+	fmt.Println("API synchronization completed!")
 	return nil
 }
 
-// runRSSSync runs the RSS-based synchronization
 func runRSSSync(config *Config) error {
-	fmt.Println("🚀 Starting synchronization with Dev.to via RSS...")
-	fmt.Printf("👤 User: @%s\n", config.DevtoUsername)
+	fmt.Println("Starting synchronization with Dev.to via RSS...")
+	fmt.Printf("User: @%s\n", config.DevtoUsername)
 
 	posts, err := fetchPostsViaRSS(config.DevtoUsername)
 	if err != nil {
-		fmt.Printf("❌ RSS sync failed: %v\n", err)
-		fmt.Println("🔄 Trying API method as fallback...")
-
-		// Fallback to API method
+		fmt.Printf("RSS sync failed: %v\n", err)
+		fmt.Println("Trying API method as fallback...")
 		return runAPISync(config)
 	}
 
@@ -279,14 +237,13 @@ func runRSSSync(config *Config) error {
 		return fmt.Errorf("failed to update data file: %w", err)
 	}
 
-	fmt.Println("✅ RSS synchronization completed successfully!")
+	fmt.Println("RSS synchronization completed successfully!")
 	return nil
 }
 
 func main() {
 	config := NewConfig()
 
-	// Check command line arguments
 	if len(os.Args) > 1 {
 		switch os.Args[1] {
 		case "api":
@@ -309,6 +266,6 @@ func main() {
 	}
 
 	if err != nil {
-		log.Fatalf("❌ Synchronization failed: %v", err)
+		log.Fatalf("Synchronization failed: %v", err)
 	}
 }

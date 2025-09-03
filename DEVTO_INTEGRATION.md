@@ -2,19 +2,19 @@
 
 This document explains how the automatic integration between your Hugo site and Dev.to works.
 
-## 🚀 How It Works
+## How It Works
 
-### 1. **Automatic Synchronization**
+### 1. Automatic Synchronization
 - **Daily**: GitHub Actions workflow runs automatically every day at 3:00 BRT
 - **On every push**: Every time you push to the `main` branch
 - **Manual**: You can run manually through GitHub Actions
 
-### 2. **Data Flow**
+### 2. Data Flow
 ```
 Dev.to RSS Feed → Go Binary → TOML File → Hugo → Site
 ```
 
-### 3. **Files Involved**
+### 3. Files Involved
 
 #### Scripts
 - `scripts/sync-devto-posts.go` - Go source code for synchronization
@@ -50,7 +50,7 @@ go build -o scripts/sync-devto-posts scripts/sync-devto-posts.go
 ./scripts/sync-devto-posts api  # Use API
 ```
 
-## 📊 Data Structure
+## Data Structure
 
 The `data/devto_posts.toml` file contains:
 
@@ -64,7 +64,7 @@ date = "2024-01-15"
 excerpt = "Post summary..."
 ```
 
-## ⚙️ Customization
+## Customization
 
 ### Change Dev.to Username
 Edit the `DEVTO_USERNAME` constant in the scripts:
