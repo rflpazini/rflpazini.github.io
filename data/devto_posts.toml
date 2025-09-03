@@ -1,0 +1,59 @@
+[[posts]]
+  title = "Docker cagent: Como orquestrar agentes IA com YAML (e por que isso muda tudo)"
+  url = "https://dev.to/rflpazini/docker-cagent-como-orquestrar-agentes-ia-com-yaml-e-por-que-isso-muda-tudo-2fjh"
+  date = "2025-09-03"
+  excerpt = "A Docker acabou de lançar algo que pode revolucionar como desenvolvemos com IA: o cagent. Se você já teve aquela dor de cabeça tentando orquestrar múltiplos agentes IA, configurar integrações c..."
+
+[[posts]]
+  title = "Go 1.25: JSON v2 e Novo GC"
+  url = "https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07"
+  date = "2025-08-20"
+  excerpt = "Chegou o Go 1.25 e, sinceramente, é sobre tempo. Duas mudanças que vão fazer diferença real no seu dia a dia: o JSON v2 experimental que não é uma piada de performance e o GreenteaGC que promete..."
+
+[[posts]]
+  title = "Docker Offload: potência de nuvem com a simplicidade de sempre"
+  url = "https://dev.to/rflpazini/docker-offload-potencia-de-nuvem-com-a-simplicidade-de-sempre-3olk"
+  date = "2025-07-10"
+  excerpt = "“Se eu já rodo docker compose up pra tudo, por que teria de aprender outro comando, ou pior, abrir um console na AWS, só pra treinar um modelo pesado?” Foi exatamente aí que a galera da Docker ..."
+
+[[posts]]
+  title = "MCP: A Docker guide"
+  url = "https://dev.to/rflpazini/mcp-a-docker-guide-3mp4"
+  date = "2025-05-27"
+  excerpt = "Hey dev, how's it going? A few months ago, everyone was talking about AI and Agents. Now, there’s a fresh buzzword lighting up the tech world: MCP. Don’t worry—it’s not the next Marvel villain..."
+
+[[posts]]
+  title = "Go Tool: Uma análise da nova ferramenta para gerenciar dependências"
+  url = "https://dev.to/rflpazini/go-tool-uma-analise-da-nova-ferramenta-para-gerenciar-dependencias-20ii"
+  date = "2025-05-16"
+  excerpt = "Por um tempo, os desenvolvedores Go precisaram usar soluções improvisadas para gerenciar dependências de ferramentas. Com o lançamento do Go 1.24, isso mudou completamente. Vamos ver como! Quem tr..."
+
+[[posts]]
+  title = "Docker Model Runner: IA Local sem dor de cabeça"
+  url = "https://dev.to/rflpazini/docker-model-runner-ia-local-sem-dor-de-cabeca-4ank"
+  date = "2025-05-07"
+  excerpt = "Já imaginou poder rodar aqueles modelos de IA gigantes no seu computador tão facilmente quanto pedir um delivery de comida? Pois é isso que o Docker Model Runner faz! É como se fosse um Uber para ..."
+
+[[posts]]
+  title = "Go Concurrency: Como rodar múltiplas coisas ao mesmo tempo sem pirar"
+  url = "https://dev.to/rflpazini/go-concurrency-como-rodar-multiplas-coisas-ao-mesmo-tempo-sem-pirar-5ej"
+  date = "2025-02-12"
+  excerpt = "Go foi projetado desde o início para facilitar a concorrência, tornando possível escrever código que executa várias tarefas ao mesmo tempo sem perder a cabeça. Neste artigo, vou te mostrar o que..."
+
+[[posts]]
+  title = "Dominando o Docker Bake: Simplificando Builds Complexos"
+  url = "https://dev.to/rflpazini/dominando-o-docker-bake-simplificando-builds-complexos-3iao"
+  date = "2025-02-05"
+  excerpt = "Com o aumento da complexidade nas aplicações modernas, especialmente em ambientes que utilizam monorepos ou múltiplos contêineres, o gerenciamento de builds no Docker pode rapidamente se tornar um..."
+
+[[posts]]
+  title = "Docker Network: O Guia Definitivo para Conectar Seus Containers"
+  url = "https://dev.to/rflpazini/docker-network-o-guia-definitivo-para-conectar-seus-containers-1h03"
+  date = "2025-01-29"
+  excerpt = "Se você já tentou rodar múltiplos containers e percebeu que um não consegue falar com o outro, bem-vindo ao mundo do Docker Networking. Sem uma rede bem configurada, seu banco de dados não conseg..."
+
+[[posts]]
+  title = "Docker Volumes"
+  url = "https://dev.to/rflpazini/docker-volumes-1lj0"
+  date = "2025-01-21"
+  excerpt = "Quando falamos em aplicações containerizadas, um ponto essencial é a persistência de dados. Por padrão, quando um container Docker é removido, todos os dados que estavam “dentro” dele se per..."

@@ -1,16 +1,18 @@
+{{ $devtoData := .Site.Data.devto_posts }}
 <div class="devto-posts">
+{{ range first 5 $devtoData.posts }}
   <div class="devto-post">
     <div class="post-header">
       <h3 class="post-title">
-        <a href="https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07" target="_blank" rel="noopener noreferrer">
-          Go 1.25: JSON v2 e Novo GC
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+          {{ .title }}
         </a>
       </h3>
       <div class="post-meta">
-        <span class="post-date">Aug 20, 2025</span>
+        <span class="post-date">{{ if .date }}{{ dateFormat "Jan 2, 2006" .date }}{{ else }}Date not available{{ end }}</span>
         <span class="post-author">por Rafael Pazini</span>
         <span class="post-platform">
-          <a href="https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07" target="_blank" rel="noopener noreferrer" class="devto-link">
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="devto-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/>
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/>
@@ -20,83 +22,18 @@
         </span>
       </div>
     </div>
-    
-    <div class="post-excerpt">
-      Chegou o Go 1.25 e, sinceramente, é sobre tempo. Duas mudanças que vão fazer diferença real no seu dia a dia: o JSON v2 experimental que não é uma piada de performance e o GreenteaGC que promete parar de sugar sua CPU.
-    </div>
-    
-    <div class="post-footer">
-      <a href="https://dev.to/rflpazini/go-125-json-v2-e-novo-gc-4k07" target="_blank" rel="noopener noreferrer" class="read-more">
-        Ler mais →
-      </a>
-    </div>
-  </div>
 
-  <div class="devto-post">
-    <div class="post-header">
-      <h3 class="post-title">
-        <a href="https://dev.to/rflpazini/desbloqueie-a-observabilidade-guia-pratico-com-opentelemetry-e-prometheus-1pbc" target="_blank" rel="noopener noreferrer">
-          Desbloqueie a Observabilidade: Guia prático com OpenTelemetry e Prometheus
-        </a>
-      </h3>
-      <div class="post-meta">
-        <span class="post-date">Oct 17, 2024</span>
-        <span class="post-author">por Rafael Pazini</span>
-        <span class="post-platform">
-          <a href="https://dev.to/rflpazini/desbloqueie-a-observabilidade-guia-pratico-com-opentelemetry-e-prometheus-1pbc" target="_blank" rel="noopener noreferrer" class="devto-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/>
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/>
-            </svg>
-            Dev.to
-          </a>
-        </span>
-      </div>
-    </div>
-    
     <div class="post-excerpt">
-      Neste artigo, implementamos observabilidade em uma aplicação Go utilizando OpenTelemetry, Prometheus e Jaeger. Exploramos o motivo de usar cada uma dessas ferramentas e detalhamos como configurar métricas e tracing de forma eficiente.
+      {{ .excerpt }}
     </div>
-    
-    <div class="post-footer">
-      <a href="https://dev.to/rflpazini/desbloqueie-a-observabilidade-guia-pratico-com-opentelemetry-e-prometheus-1pbc" target="_blank" rel="noopener noreferrer" class="read-more">
-        Ler mais →
-      </a>
-    </div>
-  </div>
 
-  <div class="devto-post">
-    <div class="post-header">
-      <h3 class="post-title">
-        <a href="https://dev.to/rflpazini/localstack-e-docker-como-aumentar-a-produtividade-no-desenvolvimento-local-sem-custos-m2c" target="_blank" rel="noopener noreferrer">
-          LocalStack e Docker: Como aumentar a produtividade no desenvolvimento LOCAL sem custos
-        </a>
-      </h3>
-      <div class="post-meta">
-        <span class="post-date">Oct 8, 2024</span>
-        <span class="post-author">por Rafael Pazini</span>
-        <span class="post-platform">
-          <a href="https://dev.to/rflpazini/localstack-e-docker-como-aumentar-a-produtividade-no-desenvolvimento-local-sem-custos-m2c" target="_blank" rel="noopener noreferrer" class="devto-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6l.02 2.44.04.5c.18-.02.4-.03.64-.03.46 0 .87.05 1.23.15.36.1.66.25.9.43.24.18.42.4.54.65.12.25.18.54.18.85 0 .31-.06.59-.18.83-.12.24-.3.45-.54.63-.24.18-.54.32-.9.42-.36.1-.77.15-1.23.15-.24 0-.46-.01-.64-.03l-.04.5-.02 2.44h.58c.38 0 .66-.07.84-.23.18-.16.27-.39.27-.68V10.7c0-.29-.09-.52-.27-.68z"/>
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15.93c-.31 0-.61-.05-.86-.15-.25-.1-.46-.25-.63-.43-.17-.18-.3-.4-.39-.65-.09-.25-.13-.54-.13-.85 0-.31.04-.6.13-.85.09-.25.22-.47.39-.65.17-.18.38-.33.63-.43.25-.1.55-.15.86-.15.31 0 .61.05.86.15.25.1.46.25.63.43.17.18.3.4.39.65.09.25.13.54.13.85 0 .31-.04.6-.13.85-.09.25-.22.47-.39.65-.17.18-.38.33-.63.43-.25.1-.55.15-.86.15z"/>
-            </svg>
-            Dev.to
-          </a>
-        </span>
-      </div>
-    </div>
-    
-    <div class="post-excerpt">
-      Desenvolver aplicações que interagem com serviços da AWS pode ser um desafio. O LocalStack surge como uma solução poderosa para emular serviços da AWS localmente, permitindo que você desenvolva e teste seu código de forma eficiente.
-    </div>
-    
     <div class="post-footer">
-      <a href="https://dev.to/rflpazini/localstack-e-docker-como-aumentar-a-produtividade-no-desenvolvimento-local-sem-custos-m2c" target="_blank" rel="noopener noreferrer" class="read-more">
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="read-more">
         Ler mais →
       </a>
     </div>
   </div>
+{{ end }}
 
   <div class="devto-post featured-post">
     <div class="post-header">
@@ -118,11 +55,11 @@
         </span>
       </div>
     </div>
-    
+
     <div class="post-excerpt">
       Acesse meu perfil completo no Dev.to para ver todos os artigos sobre Go, Docker, observabilidade, produtividade e muito mais!
     </div>
-    
+
     <div class="post-footer">
       <a href="https://dev.to/rflpazini" target="_blank" rel="noopener noreferrer" class="read-more">
         Visitar perfil completo →
@@ -235,13 +172,13 @@
   .devto-post {
     padding: 1rem;
   }
-  
+
   .post-meta {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .post-platform {
     margin-left: 0;
   }

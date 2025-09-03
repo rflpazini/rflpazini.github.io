@@ -3,8 +3,12 @@ name: github pages
 on:
   push:
     branches:
-      - main 
-  pull_request: 
+      - main
+  pull_request:
+  schedule:
+    # Executa diariamente às 6:00 UTC (3:00 BRT)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Permite execução manual
 
 jobs:
   deploy:
@@ -14,6 +18,31 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.25'
+
+      - name: Cache Go modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
+      - name: Download Go dependencies
+        run: go mod download
+
+      - name: Build Dev.to sync tool
+        run: go build -o scripts/sync-devto-posts scripts/sync-devto-posts.go
+
+      - name: Sync Dev.to posts
+        run: ./scripts/sync-devto-posts
+        continue-on-error: true # Não falha o build se a sincronização falhar
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
