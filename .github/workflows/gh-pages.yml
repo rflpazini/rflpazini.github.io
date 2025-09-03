@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - '**'  # Run on all branches
   pull_request:
   schedule:
     - cron: '0 6 * * *'
@@ -56,10 +57,18 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
+      - name: Build Hugo site
         run: hugo --minify --gc --enableGitInfo
 
-      - name: Deploy
+      - name: Validate build on feature branches
+        if: github.ref != 'refs/heads/main'
+        run: |
+          echo "✅ Build successful on branch: ${{ github.ref_name }}"
+          echo "📊 Site stats:"
+          find public -type f -name "*.html" | wc -l | xargs echo "HTML files:"
+          du -sh public | xargs echo "Site size:"
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
