@@ -291,33 +291,67 @@ margin-left: 0;
 &lt;h2 id="sobre-os-artigos"&gt;Sobre os Artigos&lt;/h2&gt;
 &lt;p&gt;Todos os artigos são publicados originalmente no &lt;a href="https://dev.to/rflpazini"&gt;Dev.to&lt;/a&gt; e sincronizados automaticamente aqui. Você também pode me seguir lá para receber as atualizações em tempo real!&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Quer sugerir um tema para um próximo artigo? Me envie uma mensagem no &lt;a href="https://www.linkedin.com/in/rflpazini"&gt;LinkedIn&lt;/a&gt; ou &lt;a href="https://twitter.com/rflpazini"&gt;Twitter&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Projetos</title><link>https://rflpazini.com/pt-br/projects/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Tue, 02 Sep 2025 12:39:13 -0300</lastmod><guid>https://rflpazini.com/pt-br/projects/</guid><description>Bem-vindo à seção de projetos! Aqui você encontra contribuições open source, side projects e ferramentas que criei para resolver problemas reais.
-Contribuições Open Source Projetos Docker Captain
-Vários projetos relacionados ao Docker e contribuições para o ecossistema Docker, incluindo melhores práticas, tutoriais e ferramentas da comunidade.
-Perfil GitHub
-github.com/rflpazini • Contribuidor ativo
-Confira meu perfil no GitHub para as últimas contribuições, forks e projetos colaborativos.
-Side Projects Ferramentas de Impressão 3D</description><content:encoded>&lt;p&gt;Bem-vindo à seção de projetos! Aqui você encontra contribuições open source, side projects e ferramentas que criei para resolver problemas reais.&lt;/p&gt;
-&lt;h2 id="contribuições-open-source"&gt;Contribuições Open Source&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Projetos Docker Captain&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Vários projetos relacionados ao Docker e contribuições para o ecossistema Docker, incluindo melhores práticas, tutoriais e ferramentas da comunidade.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Perfil GitHub&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/rflpazini"&gt;github.com/rflpazini&lt;/a&gt; • Contribuidor ativo&lt;/p&gt;
-&lt;p&gt;Confira meu perfil no GitHub para as últimas contribuições, forks e projetos colaborativos.&lt;/p&gt;
-&lt;h2 id="side-projects"&gt;Side Projects&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Ferramentas de Impressão 3D&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ferramentas e utilitários personalizados para fluxos de trabalho de impressão 3D, incluindo configurações de slicer, scripts de otimização de impressão e recursos da comunidade.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ferramentas de Produtividade&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ferramentas e scripts de produtividade pessoal que ajudam a otimizar fluxos de trabalho de desenvolvimento e tarefas diárias.&lt;/p&gt;
-&lt;h2 id="contribuições-para-a-comunidade"&gt;Contribuições para a Comunidade&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Comunidade Docker&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Participação ativa em discussões da comunidade Docker, ajudando com melhores práticas, resolução de problemas e compartilhamento de conhecimento.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Engenharia de Backend&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Contribuições para discussões de engenharia de backend, padrões de arquitetura e técnicas de otimização de performance.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Quer sugerir um tema para um próximo artigo? Me envie uma mensagem no &lt;a href="https://www.linkedin.com/in/rflpazini"&gt;LinkedIn&lt;/a&gt; ou &lt;a href="https://twitter.com/rflpazini"&gt;Twitter&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Projetos</title><link>https://rflpazini.com/pt-br/projects/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Fri, 24 Oct 2025 15:21:26 -0300</lastmod><guid>https://rflpazini.com/pt-br/projects/</guid><description>Como Engenheiro Backend e Docker Captain, foco em construir sistemas escaláveis e soluções containerizadas. Aqui estão meus principais projetos e contribuições.
+Projetos em Destaque Projetos Docker Captain Contribuições para Ecossistema Docker
+Engenheiro Backend • Ativo
+Melhores práticas Docker, padrões de containerização e educação da comunidade. Liderando workshops e criando conteúdo para a comunidade Docker.
+Integrações LocalStack
+Go &amp; Java • Ativo
+Criando exemplos e documentação para LocalStack, focando em mocking de serviços AWS para ambientes de desenvolvimento local.</description><content:encoded>&lt;p&gt;Como Engenheiro Backend e Docker Captain, foco em construir sistemas escaláveis e soluções containerizadas. Aqui estão meus principais projetos e contribuições.&lt;/p&gt;
 &lt;h2 id="projetos-em-destaque"&gt;Projetos em Destaque&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Mais detalhes dos projetos em breve!&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="projetos-docker-captain"&gt;Projetos Docker Captain&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Contribuições para Ecossistema Docker&lt;/strong&gt;&lt;br&gt;
+Engenheiro Backend • Ativo&lt;br&gt;
+Melhores práticas Docker, padrões de containerização e educação da comunidade. Liderando workshops e criando conteúdo para a comunidade Docker.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Integrações LocalStack&lt;/strong&gt;&lt;br&gt;
+Go &amp;amp; Java • Ativo&lt;br&gt;
+Criando exemplos e documentação para LocalStack, focando em mocking de serviços AWS para ambientes de desenvolvimento local.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exemplos Docker Buildx&lt;/strong&gt;&lt;br&gt;
+Go 1.23+ &amp;amp; Java 21 • Ativo&lt;br&gt;
+Exemplos de builds multi-plataforma mostrando capacidades modernas do Docker Buildx para pipelines eficientes de CI/CD.&lt;/p&gt;
+&lt;h3 id="saas--aplicações-web"&gt;SaaS &amp;amp; Aplicações Web&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;James 3D SaaS&lt;/strong&gt;&lt;br&gt;
+Go &amp;amp; AWS • Ativo&lt;br&gt;
+Sistema de gestão de fazenda para operações de impressão 3D. Rastreia inventário, otimiza filas de impressão e gerencia pedidos de clientes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ModMini3D&lt;/strong&gt;&lt;br&gt;
+Design 3D • Ativo&lt;br&gt;
+Marca para miniaturas articuladas customizadas. Especializada em modelos de personagens detalhados para jogos e colecionáveis.&lt;/p&gt;
+&lt;h3 id="iot--hardware"&gt;IoT &amp;amp; Hardware&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Botão de Pânico ESP32&lt;/strong&gt;&lt;br&gt;
+AWS Lambda &amp;amp; WhatsApp • Ativo&lt;br&gt;
+Dispositivo IoT que envia alertas de emergência via WhatsApp usando arquitetura serverless AWS e IoT Core.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rack Orange Pi 5 Plus&lt;/strong&gt;&lt;br&gt;
+Design de Hardware • Ativo&lt;br&gt;
+Solução customizada de rack mount de 10 polegadas para computadores single-board Orange Pi, otimizada para edge computing.&lt;/p&gt;
+&lt;h3 id="desenvolvimento-de-apis"&gt;Desenvolvimento de APIs&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;App iOS DePé&lt;/strong&gt;&lt;br&gt;
+Swift &amp;amp; NFC • Ativo&lt;br&gt;
+App iOS de alarme com integração NFC para experiências de despertar seamless.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MVP Healthtech&lt;/strong&gt;&lt;br&gt;
+AWS Lambda &amp;amp; IA • Ativo&lt;br&gt;
+Sistema de ingestão de exames médicos usando IA para processamento automatizado de documentos e extração de dados de saúde.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;API Gateway Go&lt;/strong&gt;&lt;br&gt;
+Go &amp;amp; MCP • Ativo&lt;br&gt;
+Gateway de API REST com integração MCP (Message Control Protocol), apresentando implementação Swagger PetStore.&lt;/p&gt;
+&lt;h2 id="mais-projetos"&gt;Mais Projetos&lt;/h2&gt;
+&lt;h3 id="contribuições-para-comunidade"&gt;Contribuições para Comunidade&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;PlutoTV Open Source&lt;/strong&gt;&lt;br&gt;
+Engenharia Backend • Ativo&lt;br&gt;
+Contribuições genéricas para plataforma de streaming PlutoTV, focando em arquitetura backend e otimização de performance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Perfil GitHub&lt;/strong&gt;&lt;br&gt;
+&lt;a href="https://github.com/rflpazini"&gt;github.com/rflpazini&lt;/a&gt;&lt;br&gt;
+Contribuidor ativo em múltiplos repositórios, focando em Go, Docker e tecnologias backend.&lt;/p&gt;
+&lt;h3 id="side-projects"&gt;Side Projects&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Ferramentas de Impressão 3D&lt;/strong&gt;&lt;br&gt;
+Python &amp;amp; Shell • Ativo&lt;br&gt;
+Scripts customizados para otimização de impressão, automação de slicer e gestão de fluxo de trabalho 3D.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Scripts de Produtividade&lt;/strong&gt;&lt;br&gt;
+Shell &amp;amp; Go • Ativo&lt;br&gt;
+Ferramentas de desenvolvimento pessoal para automação de workflow, geração de código e tarefas diárias de engenharia.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Interessado em colaborar em um projeto? Vamos nos conectar no &lt;a href="https://github.com/rflpazini"&gt;GitHub&lt;/a&gt; ou &lt;a href="https://www.linkedin.com/in/rflpazini"&gt;LinkedIn&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Recursos</title><link>https://rflpazini.com/pt-br/resources/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Wed, 03 Sep 2025 19:50:23 -0300</lastmod><guid>https://rflpazini.com/pt-br/resources/</guid><description>Última revisão: 27 de janeiro de 2025
+&lt;span class="button" style="text-align: center; width: 100%;" tex&gt;
+&lt;a href="https://github.com/rflpazini" class="button__text"&gt;&lt;i class="fa-solid fa-download" style="margin-right: 10px; margin-top: 2px;"&gt;&lt;/i&gt; Ver Todos os Projetos &lt;/a&gt;
+&lt;/span&gt;</content:encoded><dc:creator>Rafael Pazini</dc:creator></item><item><title>Recursos</title><link>https://rflpazini.com/pt-br/resources/</link><pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate><lastmod>Wed, 03 Sep 2025 19:50:23 -0300</lastmod><guid>https://rflpazini.com/pt-br/resources/</guid><description>Última revisão: 27 de janeiro de 2025
 Recursos curados que moldaram minha jornada como Engenheiro Backend e Docker Captain. Cada item inclui autor/fonte, link e o porquê importa para mim.
 Engenharia de Backend Padrões de Arquitetura Designing Data-Intensive Applications por Martin Kleppmann [book] - A bíblia do design de sistemas de dados modernos. Essencial para entender sistemas distribuídos e arquiteturas de dados. Microservices Patterns por Chris Richardson [book] - Guia abrangente de padrões de arquitetura de microsserviços e anti-padrões. Building Microservices por Sam Newman [book] - Guia prático para projetar e construir microsserviços efetivamente. Performance &amp; Escalabilidade Systems Performance por Brendan Gregg [book] - Essencial para entender performance de sistemas e debugging em escala. High Performance Browser Networking por Ilya Grigorik [book] - Mergulho profundo em performance de rede que se aplica também a sistemas backend. Database Internals por Alex Petrov [book] - Entender como bancos de dados funcionam internamente é crucial para otimização de performance. Docker &amp; Containers Documentação Oficial Documentação Docker [doc] - Fonte canônica do conhecimento Docker. Atualizada regularmente com melhores práticas. Melhores Práticas Docker [doc] - Guia oficial para construir imagens Docker eficientes e workflows. Documentação Kubernetes [doc] - Referência completa para Kubernetes, a plataforma de fato para orquestração de containers. Recursos de Aprendizado Kubernetes Up &amp; Running por Kelsey Hightower [book] - Melhor introdução prática às operações Kubernetes. Container Security por Liz Rice [book] - Práticas essenciais de segurança para aplicações containerizadas. Docker Deep Dive por Nigel Poulton [book] - Entendimento abrangente dos internals do Docker. Produtividade &amp; Ferramentas Ferramentas de Desenvolvimento Go [doc] - Minha linguagem backend preferida. Simples, eficiente e perfeita para microsserviços. LocalStack [doc] - Essencial para desenvolvimento AWS local sem custos ou complexidade. Docker Model Runner [doc] - Simplifica workflows de deployment de modelos ML. Métodos de Produtividade Atomic Habits por James Clear [book] - Mudou minha abordagem à produtividade diária e formação de hábitos. Deep Work por Cal Newport [book] - Essencial para manter foco em um mundo cheio de distrações. Getting Things Done por David Allen [book] - Abordagem sistemática ao gerenciamento de tarefas que realmente funciona. Impressão 3D Software &amp; Ferramentas PrusaSlicer [doc] - Meu slicer preferido para impressões 3D confiáveis. Open source e comunidade ativa. Cura [doc] - Excelente slicer alternativo com ótimo suporte da comunidade. Fusion 360 [doc] - Software CAD poderoso para modelagem e design 3D. Recursos de Aprendizado Base de Conhecimento Prusa [doc] - Troubleshooting abrangente e melhores práticas para impressão 3D. Make: 3D Printing por Mark Frauenfelder [book] - Ótima introdução à impressão 3D para iniciantes. Leitura Recomendada Engenharia de Software Clean Code por Robert C. Martin [book] - Princípios atemporais para escrever código manutenível. The Pragmatic Programmer por David Thomas &amp; Andrew Hunt [book] - Sabedoria prática para desenvolvimento de software. Code Complete por Steve McConnell [book] - Guia abrangente para construção de software. Carreira &amp; Crescimento Staff Engineer por Will Larson [book] - Essencial para papéis sênior de engenharia e liderança. The Manager&rsquo;s Path por Camille Fournier [book] - Entendendo gerenciamento de engenharia e liderança. Accelerate por Nicole Forsgren, Jez Humble, Gene Kim [book] - Abordagem data-driven para DevOps e performance de entrega de software. Ver meu GitHub</description><content:encoded>&lt;p&gt;Última revisão: 27 de janeiro de 2025&lt;/p&gt;
 &lt;p&gt;Recursos curados que moldaram minha jornada como Engenheiro Backend e Docker Captain. Cada item inclui autor/fonte, link e o porquê importa para mim.&lt;/p&gt;
